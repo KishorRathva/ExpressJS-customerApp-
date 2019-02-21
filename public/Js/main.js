@@ -8,7 +8,7 @@ deleteUser = () => {
     if(confirmation){
         $.ajax({
             method:"DELETE",
-            url:'/users/delete/'+$("#deleteUser").attr('data-id'),
+            url:'/user/delete/'+$("#deleteUser").attr('data-id'),
             success : function( data) {
                 console.log('success');
              },

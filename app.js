@@ -104,7 +104,7 @@ app.delete('/user/delete/:id', (req,res) => {
         if(err){
             console.log(err);
         }
-        res.redirect('/');
+        res.redirect('/')
     })
 });
 app.listen(3000, () => {
