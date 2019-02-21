@@ -20,6 +20,7 @@ deleteUser = () => {
         }).done(response => {
             window.location.replace('/');
         });
+        window.location.replace('/');
     }else{
         return false;
     }
