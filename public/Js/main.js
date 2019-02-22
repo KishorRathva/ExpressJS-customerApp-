@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $('#deleteUser').on('click',deleteUser);
+    $('.deleteUser').on('click',deleteUser);
 });
 
 deleteUser = () => {
@@ -7,8 +7,8 @@ deleteUser = () => {
 
     if(confirmation){
         $.ajax({
-            method:"DELETE",
-            url:'/user/delete/'+$("#deleteUser").attr('data-id'),
+            type:"DELETE",
+            url:'/users/delete/'+$('.deleteUser').data('id'),
             success : function( data) {
                 console.log('success');
              },
@@ -20,7 +20,6 @@ deleteUser = () => {
         }).done(response => {
             window.location.replace('/');
         });
-        window.location.replace('/');
     }else{
         return false;
     }
